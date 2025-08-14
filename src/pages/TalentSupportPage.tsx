@@ -1,32 +1,10 @@
-import { useEffect, useState } from "react";
+// src/pages/TalentSupportPage.tsx
 import TalentDonation from "../components/TalentDonation";
 
-interface Talent {
-  name: string;
-  wallet: string;
-}
-
-const TalentSupportPage = () => {
-  const [talents, setTalents] = useState<Talent[]>([]);
-
-  useEffect(() => {
-    fetch("/talents.json")
-      .then((res) => res.json())
-      .then(setTalents);
-  }, []);
-
+export default function TalentSupportPage() {
   return (
-    <div className="min-h-screen bg-black text-white py-10 px-4">
-      <h1 className="text-3xl font-bold text-center mb-8">🌟 Sistema de Apoyo al Talento</h1>
-      {talents.map((talent) => (
-        <TalentDonation
-          key={talent.wallet}
-          talentName={talent.name}
-          talentAddress={talent.wallet}
-        />
-      ))}
+    <div className="min-h-screen bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-10 px-4">
+      <TalentDonation />
     </div>
   );
-};
-
-export default TalentSupportPage;
+}

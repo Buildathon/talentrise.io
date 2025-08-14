@@ -3,8 +3,8 @@ import { Link, useLocation } from "wouter";
 
 const navItems = [
   { name: "home", path: "/home", icon: "bx bx-home" },
+  { name: "talento", path: "/talento", icon: "bx bx-group" },
   { name: "Perfil", path: "/perfil", icon: "bx bx-user" },
-  { name: "Following", path: "/following", icon: "bx bx-group" },
   { name: "Notificaciones", path: "/notificaciones", icon: "bx bx-bell" },
   { name: "Ajustes", path: "/ajustes", icon: "bx bx-cog" },
 ];
